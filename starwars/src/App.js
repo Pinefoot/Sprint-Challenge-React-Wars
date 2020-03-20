@@ -13,7 +13,7 @@ const App = () => {
     axios
       .get("https://swapi.co/api/people")
       .then(response => {
-        console.log(response.data.results);
+        //console.log(response.data.results);
         setStarwarsData(response.data.results);
       })
       .catch(error => {
@@ -38,6 +38,11 @@ const App = () => {
         return (
           <MainPage
             key = {index}
+            name = {data.name}
+            homeworld = {data.homeworld}
+            birthYear = {data.birthyear}
+            image = {data.url}
+            films = {data.films}
 
           />
         )
